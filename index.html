@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Resume</title>
+    <meta name="description" content="A simple HTML resume template." />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <header id="header" role="banner">
+      <nav role="navigation">
+        <div class="hamburger">☰</div>
+        <ul>
+          <li><a href="#header" tabindex="0">Home</a></li>
+          <li><a href="#about-me" tabindex="0">About</a></li>
+          <li><a href="#projects" tabindex="0">Projects</a></li>
+          <li><a href="#skills" tabindex="0">Skills</a></li>
+          <li><a href="#contact" tabindex="0">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="about-me" role="main">
+      <h2>About Me</h2>
+      <img src="https://picsum.photos/400/400" alt="A picture of me">
+      <p>
+        I am a web developer who is passionate about creating beautiful and
+        functional websites.
+      </p>
+    </section>
+    <section id="projects" role="main">
+      <h2>Projects</h2>
+      <div id="project-filters">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('web-development')">Web Development</button>
+        <button onclick="filterProjects('e-commerce')">E-commerce</button>
+      </div>
+      <article class="web-development">
+        <figure>
+          <img src="https://picsum.photos/640/300" alt="Screenshot of Project 1, a web application for task management" />
+          <figcaption>Project 1</figcaption>
+        </figure>
+        <p>Description of Project 1.</p>
+      </article>
+      <article class="e-commerce">
+        <figure>
+          <img src="https://picsum.photos/640/300" alt="Screenshot of Project 2, an e-commerce website for handmade crafts" />
+          <figcaption>Project 2</figcaption>
+        </figure>
+        <p>Description of Project 2.</p>
+      </article>
+    </section>
+    <section id="skills" role="main">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Git</li>
+        <li>Responsive Design</li>
+      </ul>
+    </section>
+    <section id="contact" role="main">
+      <h2>Contact</h2>
+      <form action="#" method="post">
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required tabindex="0">
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required tabindex="0">
+        </div>
+        <div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required tabindex="0"></textarea>
+        </div>
+        <div>
+          <button type="submit" tabindex="0">Send</button>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
