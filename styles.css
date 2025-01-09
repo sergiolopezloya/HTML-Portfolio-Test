@@ -184,7 +184,9 @@ section h2 {
   margin-bottom: 5px;
 }
 
-#contact input, #contact textarea, #contact button {
+#contact input,
+#contact textarea,
+#contact button {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -210,19 +212,19 @@ nav .hamburger {
   cursor: pointer;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header + section#about-me {
+  margin-top: 6rem;
+}
+
 /* Media queries */
 @media (max-width: 768px) {
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  header + section#about-me {
-    margin-top: 6rem;
-  }
-
   nav ul {
     display: none;
   }
@@ -278,18 +280,22 @@ nav .hamburger {
   border-radius: 10px;
 }
 
-#contact input, #contact textarea, #contact button {
+#contact input,
+#contact textarea,
+#contact button {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
 
 /* Styles for invalid input */
-input.invalid, textarea.invalid {
+input.invalid,
+textarea.invalid {
   border-color: red;
 }
 
-input.invalid + span, textarea.invalid + span {
+input.invalid + span,
+textarea.invalid + span {
   color: red;
   font-size: 0.9em;
 }
